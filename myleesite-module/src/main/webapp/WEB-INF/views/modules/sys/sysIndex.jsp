@@ -9,8 +9,8 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-    <title>${fns:getConfig('productName')} | 首页</title>
-    <meta http-equiv="refresh" content="0; url=${ctx}/sys/user/info"/>
+    <title>首页</title>
+    <meta http-equiv="refresh" content="0; url=${pageContext.request.contextPath}/sys/user/info"/>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="zyw" name="author" />
 </head>
@@ -26,7 +26,7 @@
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="#">
-                        <img src="../assets/layouts/layout4/img/logo-light.png" alt="logo" class="logo-default" /> </a>
+                        <img src="../../../../static/assets/layouts/layout4/img/logo-light.png" alt="logo" class="logo-default" /> </a>
                     <div class="menu-toggler sidebar-toggler">
                         <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
                     </div>

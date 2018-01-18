@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<script src="${ctxStatic}/assets/global/plugins/echarts/echarts.js"></script>
+<script src="../../../static/assets/global/plugins/echarts/echarts.js"></script>
 <script type="text/javascript">
 	// 路径配置
 	require.config({
 		paths : {
-			echarts : '${ctxStatic}/assets/global/plugins/echarts'
+			echarts : '../../../static/assets/global/plugins/echarts'
 		} 
 	});
 </script>
