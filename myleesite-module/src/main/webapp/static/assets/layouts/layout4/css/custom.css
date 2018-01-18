@@ -1,0 +1,29 @@
+/* 将整站字体设置为 微软雅黑 */
+* {
+    font-family: "Microsoft YaHei", "FontAwesome", "Simple-Line-Icons" ! important;
+}
+
+/* 设置垂直居中 */
+td {
+    vertical-align: middle !important;
+}
+
+/* 联系人表格 */
+.client-avatar {
+    width: 42px;
+}
+
+.client-avatar img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.contact-type {
+    width: 20px;
+    color: #c1c3c4;
+}
+
+.client-status {
+    text-align: left;
+}
