@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.IimMailComposeMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.IimMailCompose">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="readstatus" jdbcType="VARCHAR" property="readstatus" />
+    <result column="senderId" jdbcType="VARCHAR" property="senderid" />
+    <result column="receiverId" jdbcType="VARCHAR" property="receiverid" />
+    <result column="sendtime" jdbcType="TIMESTAMP" property="sendtime" />
+    <result column="mailId" jdbcType="VARCHAR" property="mailid" />
+  </resultMap>
+</mapper>

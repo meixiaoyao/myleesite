@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.ConfigMailMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.ConfigMail">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="mail_host" jdbcType="VARCHAR" property="mailHost" />
+    <result column="mail_port" jdbcType="INTEGER" property="mailPort" />
+    <result column="mail_username" jdbcType="VARCHAR" property="mailUsername" />
+    <result column="mail_password" jdbcType="VARCHAR" property="mailPassword" />
+    <result column="mail_from" jdbcType="VARCHAR" property="mailFrom" />
+    <result column="mail_ssl" jdbcType="VARCHAR" property="mailSsl" />
+  </resultMap>
+</mapper>

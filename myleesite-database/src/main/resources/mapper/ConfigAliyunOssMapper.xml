@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.ConfigAliyunOssMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.ConfigAliyunOss">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="oss_key" jdbcType="VARCHAR" property="ossKey" />
+    <result column="oss_secret" jdbcType="VARCHAR" property="ossSecret" />
+    <result column="bucket_name" jdbcType="VARCHAR" property="bucketName" />
+    <result column="oss_end_point" jdbcType="VARCHAR" property="ossEndPoint" />
+    <result column="auto_create_bucket" jdbcType="VARCHAR" property="autoCreateBucket" />
+    <result column="baidu_use_status" jdbcType="VARCHAR" property="baiduUseStatus" />
+    <result column="use_cdn" jdbcType="VARCHAR" property="useCdn" />
+    <result column="cdn_end_point" jdbcType="VARCHAR" property="cdnEndPoint" />
+  </resultMap>
+</mapper>

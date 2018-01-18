@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.ConfigAliyunPushMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.ConfigAliyunPush">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="access_key_id" jdbcType="VARCHAR" property="accessKeyId" />
+    <result column="access_key_secret" jdbcType="VARCHAR" property="accessKeySecret" />
+    <result column="app_key" jdbcType="VARCHAR" property="appKey" />
+    <result column="region_id" jdbcType="VARCHAR" property="regionId" />
+  </resultMap>
+</mapper>

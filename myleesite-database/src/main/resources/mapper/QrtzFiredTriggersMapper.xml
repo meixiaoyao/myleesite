@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.QrtzFiredTriggersMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.QrtzFiredTriggers">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sched_name" jdbcType="VARCHAR" property="schedName" />
+    <id column="entry_id" jdbcType="VARCHAR" property="entryId" />
+    <result column="trigger_name" jdbcType="VARCHAR" property="triggerName" />
+    <result column="trigger_group" jdbcType="VARCHAR" property="triggerGroup" />
+    <result column="instance_name" jdbcType="VARCHAR" property="instanceName" />
+    <result column="fired_time" jdbcType="BIGINT" property="firedTime" />
+    <result column="sched_time" jdbcType="BIGINT" property="schedTime" />
+    <result column="priority" jdbcType="INTEGER" property="priority" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="job_name" jdbcType="VARCHAR" property="jobName" />
+    <result column="job_group" jdbcType="VARCHAR" property="jobGroup" />
+    <result column="is_nonconcurrent" jdbcType="VARCHAR" property="isNonconcurrent" />
+    <result column="requests_recovery" jdbcType="VARCHAR" property="requestsRecovery" />
+  </resultMap>
+</mapper>

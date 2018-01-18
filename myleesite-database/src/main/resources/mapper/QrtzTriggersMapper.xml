@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.QrtzTriggersMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.QrtzTriggers">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sched_name" jdbcType="VARCHAR" property="schedName" />
+    <id column="trigger_name" jdbcType="VARCHAR" property="triggerName" />
+    <id column="trigger_group" jdbcType="VARCHAR" property="triggerGroup" />
+    <result column="job_name" jdbcType="VARCHAR" property="jobName" />
+    <result column="job_group" jdbcType="VARCHAR" property="jobGroup" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="next_fire_time" jdbcType="BIGINT" property="nextFireTime" />
+    <result column="prev_fire_time" jdbcType="BIGINT" property="prevFireTime" />
+    <result column="priority" jdbcType="INTEGER" property="priority" />
+    <result column="trigger_state" jdbcType="VARCHAR" property="triggerState" />
+    <result column="trigger_type" jdbcType="VARCHAR" property="triggerType" />
+    <result column="start_time" jdbcType="BIGINT" property="startTime" />
+    <result column="end_time" jdbcType="BIGINT" property="endTime" />
+    <result column="calendar_name" jdbcType="VARCHAR" property="calendarName" />
+    <result column="misfire_instr" jdbcType="SMALLINT" property="misfireInstr" />
+    <result column="job_data" jdbcType="LONGVARBINARY" property="jobData" />
+  </resultMap>
+</mapper>

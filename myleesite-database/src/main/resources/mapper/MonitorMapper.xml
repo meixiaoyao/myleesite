@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.MonitorMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.Monitor">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="cpu" jdbcType="VARCHAR" property="cpu" />
+    <result column="jvm" jdbcType="VARCHAR" property="jvm" />
+    <result column="ram" jdbcType="VARCHAR" property="ram" />
+    <result column="toemail" jdbcType="VARCHAR" property="toemail" />
+  </resultMap>
+</mapper>

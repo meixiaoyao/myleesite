@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.ConfigSmsMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.ConfigSms">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="sms_access_id" jdbcType="VARCHAR" property="smsAccessId" />
+    <result column="sms_access_key" jdbcType="VARCHAR" property="smsAccessKey" />
+    <result column="sms_mns_endpoint" jdbcType="VARCHAR" property="smsMnsEndpoint" />
+    <result column="sms_topic" jdbcType="VARCHAR" property="smsTopic" />
+    <result column="sms_sign_name" jdbcType="VARCHAR" property="smsSignName" />
+    <result column="test_number" jdbcType="VARCHAR" property="testNumber" />
+  </resultMap>
+</mapper>

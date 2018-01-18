@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.GenTableColumnMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.GenTableColumn">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="gen_table_id" jdbcType="VARCHAR" property="genTableId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="comments" jdbcType="VARCHAR" property="comments" />
+    <result column="jdbc_type" jdbcType="VARCHAR" property="jdbcType" />
+    <result column="java_type" jdbcType="VARCHAR" property="javaType" />
+    <result column="java_field" jdbcType="VARCHAR" property="javaField" />
+    <result column="is_pk" jdbcType="CHAR" property="isPk" />
+    <result column="is_null" jdbcType="CHAR" property="isNull" />
+    <result column="is_insert" jdbcType="CHAR" property="isInsert" />
+    <result column="is_edit" jdbcType="CHAR" property="isEdit" />
+    <result column="is_list" jdbcType="CHAR" property="isList" />
+    <result column="is_query" jdbcType="CHAR" property="isQuery" />
+    <result column="query_type" jdbcType="VARCHAR" property="queryType" />
+    <result column="show_type" jdbcType="VARCHAR" property="showType" />
+    <result column="dict_type" jdbcType="VARCHAR" property="dictType" />
+    <result column="settings" jdbcType="VARCHAR" property="settings" />
+    <result column="sort" jdbcType="DECIMAL" property="sort" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+    <result column="is_form" jdbcType="VARCHAR" property="isForm" />
+    <result column="tableName" jdbcType="VARCHAR" property="tablename" />
+    <result column="fieldLabels" jdbcType="VARCHAR" property="fieldlabels" />
+    <result column="fieldKeys" jdbcType="VARCHAR" property="fieldkeys" />
+    <result column="searchLabel" jdbcType="VARCHAR" property="searchlabel" />
+    <result column="searchKey" jdbcType="VARCHAR" property="searchkey" />
+  </resultMap>
+</mapper>

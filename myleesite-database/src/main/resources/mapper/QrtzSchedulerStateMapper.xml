@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyw.myleesite.database.mapper.QrtzSchedulerStateMapper">
+  <resultMap id="BaseResultMap" type="com.zyw.myleesite.database.pojo.QrtzSchedulerState">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sched_name" jdbcType="VARCHAR" property="schedName" />
+    <id column="instance_name" jdbcType="VARCHAR" property="instanceName" />
+    <result column="last_checkin_time" jdbcType="BIGINT" property="lastCheckinTime" />
+    <result column="checkin_interval" jdbcType="BIGINT" property="checkinInterval" />
+  </resultMap>
+</mapper>
