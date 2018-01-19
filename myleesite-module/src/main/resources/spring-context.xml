@@ -11,9 +11,4 @@
     <!-- 配置 Bean Validator 定义 -->
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 
-    <import resource="classpath:spring-context-druid.xml" />
-    <import resource="classpath:spring-context-mybatis.xml" />
-    <import resource="classpath:spring-context-kaptcha.xml" />
-    <import resource="classpath:spring-context-shiro.xml" />
-    <import resource="classpath:spring-context-ehcache.xml" />
 </beans>

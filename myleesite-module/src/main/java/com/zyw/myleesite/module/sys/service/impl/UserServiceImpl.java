@@ -27,8 +27,7 @@ public class UserServiceImpl implements UserService {
         example.createCriteria()
                 .andEqualTo("login_name", loginId)
                 .orEqualTo("email", loginId)
-                .orEqualTo("phone", loginId)
-                .orEqualTo("mobile", loginId);
+                .orEqualTo("phone", loginId);
 
          List<User> userList = sysUserMapper.selectByExample(example);
          if(userList != null){

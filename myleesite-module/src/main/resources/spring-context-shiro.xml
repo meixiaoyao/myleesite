@@ -9,7 +9,7 @@
                 /static/** = anon
                 /validate/code= anon
                 /login = authc
-                /sysLogout = logout
+                /logout = logout
                 /** = user
             </value>
         </constructor-arg>

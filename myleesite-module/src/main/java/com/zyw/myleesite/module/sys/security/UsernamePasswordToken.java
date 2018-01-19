@@ -1,7 +1,7 @@
 package com.zyw.myleesite.module.sys.security;
 
 /**
- * 用户身份令牌
+ * 用户 密码令牌
  * <p>Title: UsernamePasswordToken</p>
  * <p>Description: </p>
  *
@@ -10,22 +10,24 @@ package com.zyw.myleesite.module.sys.security;
  * @date 2018/1/15 15:46
  */
 public class UsernamePasswordToken extends org.apache.shiro.authc.UsernamePasswordToken {
-    private String validateCode;
+    private static final long serialVersionUID = 1L;
 
-    public String getValidateCode() {
-        return validateCode;
+    private String captcha;
+
+    public String getCaptcha() {
+        return captcha;
     }
 
-    public void setValidateCode(String validateCode) {
-        this.validateCode = validateCode;
+    public void setCaptcha(String captcha) {
+        this.captcha = captcha;
     }
 
     public UsernamePasswordToken(){
         super();
     }
 
-    public UsernamePasswordToken(String username, String password, boolean rememberMe, String host, String validateCode){
+    public UsernamePasswordToken(String username, String password, boolean rememberMe, String host, String captcha){
         super(username, password, rememberMe, host);
-        this.validateCode = validateCode;
+        this.captcha = captcha;
     }
 }

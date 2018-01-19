@@ -66,12 +66,12 @@
                 <i class="fa fa-lock"></i>
                 <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" id="password" name="password" value="${password}"/> </div>
         </div>
-        <%--<c:if test="${isValidateCodeLogin}">--%>
+        <c:if test="${isValidateCodeLogin}">
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">验证码:</label>
             <sys:validateCode name="validateCode" inputCssStyle="display:inline; width:220px;" imageCssStyle="height:43px; margin-top:-3px; cursor:pointer;"/>
         </div>
-        <%--</c:if>--%>
+        </c:if>
         <div class="form-actions">
             <label class="rememberme mt-checkbox mt-checkbox-outline">
                 <input type="checkbox" name="rememberMe" ${rememberMe ? 'checked' : ''} value="1" /> 记住我
