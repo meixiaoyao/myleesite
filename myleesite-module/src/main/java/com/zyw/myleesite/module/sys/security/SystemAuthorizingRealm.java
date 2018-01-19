@@ -61,11 +61,11 @@ public class SystemAuthorizingRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken token = (UsernamePasswordToken)authenticationToken;
 
-        if(LoginController.validateCodeLogin(token.getUsername(),false,false)){
+        if(LoginController.isValidateCodeLogin(token.getUsername(),false,false)){
             String validateCode = (String) UserUtils.getSession().getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
             // 验证码错误
-            if(!token.getCaptcha().equals(validateCode)) {
-                throw new AuthenticationException("msg:验证码错误，请重新输入");
+            if(token.getCaptcha() == null && !token.getCaptcha().equals(validateCode)) {
+                throw new AuthenticationException("msg:验证码错误，请重试");
             }
         }
 
@@ -83,6 +83,7 @@ public class SystemAuthorizingRealm extends AuthorizingRealm {
         }
          return null;
     }
+
 
 
 
