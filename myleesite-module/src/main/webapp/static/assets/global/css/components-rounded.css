@@ -13442,7 +13442,7 @@ Custimized Bootstrap Wells
       font-weight: 600;
       color: #a1afbb; }
 
-/* Widget Map for max-width 480px */
+/* Widget FailMap for max-width 480px */
 @media (max-width: 480px) {
   /* 480px */
   .widget-map .widget-sparkline-chart {
