@@ -46,7 +46,7 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
         Principal principal = UserUtils.getPrincipal();
         if(principal != null){
             // 登录成功清除
-            LoginController.validateCodeLogin(principal.getName(),false,true);
+            LoginController.isValidateCodeLogin(principal.getName(),false,true);
             WebUtils.issueRedirect(request, response,"/main", null, true);
         }
     }
@@ -65,7 +65,7 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
         if(IncorrectCredentialsException.class.getName().equals(className) || UnknownAccountException.class.getName().equals(className)){
             Principal principal = UserUtils.getPrincipal();
             // 记录登录失败次数
-            LoginController.validateCodeLogin(principal.getName(),true,false);
+            LoginController.isValidateCodeLogin(principal.getName(),true,false);
             request.setAttribute("message", "用户名或密码错误，请重新输入");
         }
         else if(e.getMessage() != null && StringUtils.startsWith(e.getMessage(), "msg:")){
