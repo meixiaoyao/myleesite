@@ -32,7 +32,7 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
      */
     public AuthenticationToken createToken(ServletRequest request, ServletResponse response){
         String username = getUsername(request);
-        String password = DigestUtils.md5DigestAsHex(getPassword(request).getBytes());
+        String password = getPassword(request);
         if(password == null){
             password = "";
         }

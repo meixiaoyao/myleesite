@@ -33,23 +33,23 @@ public class ValidateCodeController {
      * @param response
      * @throws IOException
      */
-    @RequestMapping(value = "validate/code", method = RequestMethod.GET)
-    public void validateCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setDateHeader("Expires", 0);
-        response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
-        response.addHeader("Cache-Control", "post-check=0, pre-check=0");
-        response.setHeader("Pragma", "no-cache");
-        response.setContentType("image/jpeg");
-        String capText = defaultKaptcha.createText();
-        // Session 中的验证码 K V
-        request.getSession().setAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY, capText);
-        BufferedImage bi = defaultKaptcha.createImage(capText);
-        ServletOutputStream out = response.getOutputStream();
-        ImageIO.write(bi, "jpg", out);
-        try {
-            out.flush();
-        } finally {
-            out.close();
-        }
-    }
+//    @RequestMapping(value = "validate/code", method = RequestMethod.GET)
+//    public void validateCode(HttpServletRequest request, HttpServletResponse response) throws IOException {
+//        response.setDateHeader("Expires", 0);
+//        response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+//        response.addHeader("Cache-Control", "post-check=0, pre-check=0");
+//        response.setHeader("Pragma", "no-cache");
+//        response.setContentType("image/jpeg");
+//        String capText = defaultKaptcha.createText();
+//        // Session 中的验证码 K V
+//        request.getSession().setAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY, capText);
+//        BufferedImage bi = defaultKaptcha.createImage(capText);
+//        ServletOutputStream out = response.getOutputStream();
+//        ImageIO.write(bi, "jpg", out);
+//        try {
+//            out.flush();
+//        } finally {
+//            out.close();
+//        }
+//    }
 }
