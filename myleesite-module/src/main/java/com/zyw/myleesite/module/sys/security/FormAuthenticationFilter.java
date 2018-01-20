@@ -18,6 +18,11 @@ import java.security.Principal;
 
 @Service
 public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.FormAuthenticationFilter {
+    public static final String DEFAULT_CAPTCHA_PARAM = "validateCode";
+    public static final String DEFAULT_MESSAGE_PARAM = "message";
+
+    private String catptchaParam = DEFAULT_CAPTCHA_PARAM;
+    private String messageParam = DEFAULT_MESSAGE_PARAM;
 
     /**
      * 创建令牌
@@ -28,13 +33,22 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
     public AuthenticationToken createToken(ServletRequest request, ServletResponse response){
         String username = getUsername(request);
         String password = DigestUtils.md5DigestAsHex(getPassword(request).getBytes());
+        if(password == null){
+            password = "";
+        }
         boolean rememberMe = isRememberMe(request);
         String host = StringUtils.getRemoteAddr((HttpServletRequest) request);
-        String validateCode = WebUtils.getCleanParam(request, "validateCode");
-
-        return new UsernamePasswordToken(username, password, rememberMe, host, validateCode);
+        String captcha = getCaptcha(request);
+        return new UsernamePasswordToken(username, password, rememberMe, host, captcha);
     }
 
+    public String getMessageParam(){
+        return messageParam;
+    }
+
+    public String getCaptcha(ServletRequest request){
+        return WebUtils.getCleanParam(request, catptchaParam);
+    }
     /**
      * 登录成功跳转
      * @param request
@@ -61,17 +75,20 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
      */
     @Override
     protected boolean onLoginFailure(AuthenticationToken token, AuthenticationException e, ServletRequest request, ServletResponse response) {
-        String className = e.getClass().getName();
+        String className = e.getClass().getName(), message= "";
         if(IncorrectCredentialsException.class.getName().equals(className) || UnknownAccountException.class.getName().equals(className)){
-            Principal principal = UserUtils.getPrincipal();
-            // 记录登录失败次数
-            LoginController.isValidateCodeLogin(principal.getName(),true,false);
-            request.setAttribute("message", "用户名或密码错误，请重新输入");
+            message = "用户名或密码错误，请重试";
         }
         else if(e.getMessage() != null && StringUtils.startsWith(e.getMessage(), "msg:")){
-            request.setAttribute("message", e.getMessage().replace("msg:", ""));
+            message = StringUtils.replace(e.getMessage(), "msg:", "");
+            e.printStackTrace();
+        }else{
+            message = "系统出现问题，请稍后再试";
         }
+        request.setAttribute(getFailureKeyAttribute(), className);
+        request.setAttribute(getMessageParam(), message);
         return true;
     }
+
 
 }

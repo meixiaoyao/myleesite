@@ -55,7 +55,7 @@
         </div>
         <div class="form-group">
             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-            <label class="control-label visible-ie8 visible-ie9">用户名</label>
+            <label class="control-label visible-ie8 visible-ie9">账号</label>
             <div class="input-icon">
                 <i class="fa fa-user"></i>
                 <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="账号" id="username" name="username" value="${username}"/> </div>
@@ -80,7 +80,7 @@
             <button type="submit" class="btn green pull-right"> 登录 </button>
         </div>
         <div class="forget-password">
-            <p><a href="javascript:;" id="forget-password"> here </a> 忘记密码 ? </p>
+            <p><a href="javascript:;" id="forget-password"></a> 忘记密码 ? </p>
         </div>
     </form>
     <!-- END LOGIN FORM -->

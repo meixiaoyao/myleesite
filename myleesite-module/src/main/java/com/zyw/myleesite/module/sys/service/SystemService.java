@@ -1,18 +1,10 @@
 package com.zyw.myleesite.module.sys.service;
 
-import com.zyw.myleesite.common.config.Global;
-import com.zyw.myleesite.common.persistence.Page;
-import com.zyw.myleesite.common.utils.CacheUtils;
-import com.zyw.myleesite.common.utils.StringUtils;
-import com.zyw.myleesite.module.sys.entity.User;
-import com.zyw.myleesite.module.sys.utils.UserUtils;
+import com.zyw.myleesite.common.security.shiro.session.SessionDAO;
 import org.apache.shiro.session.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
-import java.util.Date;
-import java.util.List;
 
 /**
  * <p>Title: SystemService </p>
@@ -33,14 +25,14 @@ public class SystemService {
 //    private RoleDao roleDao;
 //    @Autowired
 //    private MenuDao menuDao;
-//    @Autowired
-//    private SessionDAO sessionDao;
+    @Autowired
+    private SessionDAO sessionDao;
 //    @Autowired
 //    private SystemAuthorizingRealm systemRealm;
 //
-//    public SessionDAO getSessionDao() {
-//        return sessionDao;
-//    }
+    public SessionDAO getSessionDao() {
+        return sessionDao;
+    }
 //
 //
 //    //-- User Service --//
@@ -200,14 +192,14 @@ public class SystemService {
 //        return password.equals(Encodes.encodeHex(salt) + Encodes.encodeHex(hashPassword));
 //    }
 //
-//    /**
-//     * 获得活动会话
-//     *
-//     * @return
-//     */
-//    public Collection<Session> getActiveSessions() {
-//        return sessionDao.getActiveSessions(false);
-//    }
+    /**
+     * 获得活动会话
+     *
+     * @return
+     */
+    public Collection<Session> getActiveSessions() {
+        return sessionDao.getActiveSessions(false);
+    }
 //
 //    //-- Role Service --//
 //
