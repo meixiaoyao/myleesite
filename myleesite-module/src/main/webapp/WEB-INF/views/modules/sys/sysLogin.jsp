@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<%@include file="/WEB-INF/views/include/taglib.jsp" %>--%>
+<%@include file="/WEB-INF/views/include/taglib.jsp" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -53,6 +53,7 @@
             <button class="close" data-close="alert"></button>
             <span>请输入您的账号和密码</span>
         </div>
+        <sys:message content="${message}" />
         <div class="form-group">
             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
             <label class="control-label visible-ie8 visible-ie9">账号</label>

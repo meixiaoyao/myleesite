@@ -81,9 +81,9 @@ public class FormAuthenticationFilter extends org.apache.shiro.web.filter.authc.
         }
         else if(e.getMessage() != null && StringUtils.startsWith(e.getMessage(), "msg:")){
             message = StringUtils.replace(e.getMessage(), "msg:", "");
-            e.printStackTrace();
         }else{
             message = "系统出现问题，请稍后再试";
+            e.printStackTrace();
         }
         request.setAttribute(getFailureKeyAttribute(), className);
         request.setAttribute(getMessageParam(), message);

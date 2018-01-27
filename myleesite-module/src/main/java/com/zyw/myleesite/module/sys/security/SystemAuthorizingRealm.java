@@ -89,7 +89,7 @@ public class SystemAuthorizingRealm extends AuthorizingRealm {
         // 验证码正确
         User user = userService.searchByLoginId(token.getUsername());
         System.out.println("----"+user.toString());
-        // 用户验证
+        // 撒盐
         if(user != null){
             // 判断是否允许登录
             if(Global.NO.equals(user.getLoginFlag())){
@@ -126,7 +126,7 @@ public class SystemAuthorizingRealm extends AuthorizingRealm {
     /**
      * 授权用户信息
      */
-    private static class Principal implements Serializable{
+    public static class Principal implements Serializable{
         private static final long serialVersionUID = 1L;
 
         private String id;
